@@ -1,0 +1,27 @@
+<div class="wrapper cf">
+    <div id="sidebar" class="sidebar">
+      <div>
+        <h1 class="display-4">¡Hello World!</h1>
+        <button (click)="changeState()" class="btn btn-primary">
+          {{titleBtnState}}
+        </button>
+        <hr class="my-4" />
+        <div class="card w-50" *ngIf="view" id="idtarget">
+            <div class="card-body">
+              <h5 class="card-title">Name: {{ title }}</h5>
+              <h5 class="card-text">Class: <p>{{ classSub }}</p></h5>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="content" class="content">
+      <div v-for="item in dataAcademic[0].students" :key="item.id">
+        <div class="card w-50" *ngFor="let item of listItems" id="idtarget1">
+            <div class="card-body">
+              <h5 class="card-title">Name: {{ item }}</h5>
+              <h5 class="card-text">Class: {{ classSub }}</h5>
+            </div>
+        </div>
+      </div>
+    </div>    
+  </div>
